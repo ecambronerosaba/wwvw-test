@@ -1,0 +1,571 @@
+class @org.wikidata
+#_[name="Wikidata QA"]
+#_[description="Natural language dialogues over Wikidata knowledge base."] {
+  import loader from @org.thingpedia.v2();
+
+  import config from @org.thingpedia.config.none();
+
+  entity health_problem
+    #[has_ner=true];
+
+  entity academic_discipline extends p_medical_specialty, p_has_cause, p_part_of
+    #[has_ner=true];
+
+  entity genetics extends p_medical_specialty
+    #[has_ner=true];
+
+  entity medical_specialty extends p_medical_specialty
+    #[has_ner=true];
+
+  entity academic_major extends p_medical_specialty
+    #[has_ner=true];
+
+  entity p_medical_specialty extends entity
+    #[has_ner=false];
+
+  entity chemical_compound extends p_drug_used_for_treatment, p_has_cause, p_medical_condition_treated
+    #[has_ner=true];
+
+  entity medication extends p_drug_used_for_treatment, p_medical_condition_treated
+    #[has_ner=true];
+
+  entity biopharmaceutical extends p_drug_used_for_treatment
+    #[has_ner=true];
+
+  entity enzyme_family extends p_drug_used_for_treatment
+    #[has_ner=true];
+
+  entity pair_of_enantiomers extends p_drug_used_for_treatment
+    #[has_ner=true];
+
+  entity substituted_benzene extends p_drug_used_for_treatment
+    #[has_ner=true];
+
+  entity botulinum_toxin extends p_drug_used_for_treatment
+    #[has_ner=true];
+
+  entity insecticide extends p_drug_used_for_treatment
+    #[has_ner=true];
+
+  entity carboxylic_acid extends p_drug_used_for_treatment
+    #[has_ner=true];
+
+  entity structural_class_of_chemical_compounds extends p_drug_used_for_treatment
+    #[has_ner=true];
+
+  entity p_drug_used_for_treatment extends entity
+    #[has_ner=false];
+
+  entity taxon extends p_has_cause, p_named_after, p_cause_of, p_afflicts, p_found_in_taxon
+    #[has_ner=true];
+
+  entity disease extends p_has_cause, p_part_of, p_symptoms, p_cause_of
+    #[has_ner=true];
+
+  entity strain extends p_has_cause
+    #[has_ner=true];
+
+  entity side_effect extends p_has_cause
+    #[has_ner=true];
+
+  entity group_of_chemical_compounds extends p_has_cause
+    #[has_ner=true];
+
+  entity food extends p_has_cause
+    #[has_ner=true];
+
+  entity mode_of_inheritance extends p_has_cause
+    #[has_ner=true];
+
+  entity food_ingredient extends p_has_cause
+    #[has_ner=true];
+
+  entity physical_phenomenon extends p_has_cause
+    #[has_ner=true];
+
+  entity process extends p_has_cause
+    #[has_ner=true];
+
+  entity organisms_known_by_a_particular_common_name extends p_has_cause, p_afflicts
+    #[has_ner=true];
+
+  entity infectious_disease extends p_has_cause
+    #[has_ner=true];
+
+  entity gas extends p_has_cause
+    #[has_ner=true];
+
+  entity smoking extends p_has_cause
+    #[has_ner=true];
+
+  entity treatment extends p_has_cause
+    #[has_ner=true];
+
+  entity relationship extends p_has_cause
+    #[has_ner=true];
+
+  entity carcinogen extends p_has_cause
+    #[has_ner=true];
+
+  entity isotope_of_iodine extends p_has_cause
+    #[has_ner=true];
+
+  entity p_has_cause extends entity
+    #[has_ner=false];
+
+  entity gene extends p_genetic_association
+    #[has_ner=true];
+
+  entity p_genetic_association extends entity
+    #[has_ner=false];
+
+  entity university_teacher extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity physician extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity writer extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity ophthalmologist extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity neurologist extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity psychologist extends p_discoverer_or_inventor
+    #[has_ner=true];
+
+  entity human extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity pediatrician extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity poet extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity politician extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity endocrinologist extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity scientist extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity psychiatrist extends p_discoverer_or_inventor, p_named_after
+    #[has_ner=true];
+
+  entity pedagogue extends p_discoverer_or_inventor
+    #[has_ner=true];
+
+  entity neuroscientist extends p_discoverer_or_inventor
+    #[has_ner=true];
+
+  entity professor extends p_discoverer_or_inventor
+    #[has_ner=true];
+
+  entity botanist extends p_discoverer_or_inventor
+    #[has_ner=true];
+
+  entity p_discoverer_or_inventor extends entity
+    #[has_ner=false];
+
+  entity urban_municipality_of_germany extends p_named_after
+    #[has_ner=true];
+
+  entity veterinarian extends p_named_after
+    #[has_ner=true];
+
+  entity dermatologist extends p_named_after
+    #[has_ner=true];
+
+  entity pathologist extends p_named_after
+    #[has_ner=true];
+
+  entity surgeon extends p_named_after
+    #[has_ner=true];
+
+  entity town_of_the_united_states extends p_named_after
+    #[has_ner=true];
+
+  entity baseball_player extends p_named_after
+    #[has_ner=true];
+
+  entity anatomical_structure extends p_named_after, p_afflicts, p_location
+    #[has_ner=true];
+
+  entity musician extends p_named_after
+    #[has_ner=true];
+
+  entity wikimedia_disambiguation_page extends p_named_after
+    #[has_ner=true];
+
+  entity translator extends p_named_after
+    #[has_ner=true];
+
+  entity water_deity extends p_named_after
+    #[has_ner=true];
+
+  entity watercourse extends p_named_after
+    #[has_ner=true];
+
+  entity soldier extends p_named_after
+    #[has_ner=true];
+
+  entity cardiologist extends p_named_after
+    #[has_ner=true];
+
+  entity p_named_after extends entity
+    #[has_ner=false];
+
+  entity p_part_of extends entity
+    #[has_ner=false];
+
+  entity symptom extends p_symptoms
+    #[has_ner=true];
+
+  entity clinical_sign extends p_symptoms
+    #[has_ner=true];
+
+  entity rare_disease extends p_symptoms
+    #[has_ner=true];
+
+  entity vision_disorder extends p_symptoms
+    #[has_ner=true];
+
+  entity nervous_system_disease extends p_symptoms, p_cause_of
+    #[has_ner=true];
+
+  entity phobia extends p_symptoms
+    #[has_ner=true];
+
+  entity medical_sign extends p_symptoms
+    #[has_ner=true];
+
+  entity sexual_dysfunction extends p_symptoms
+    #[has_ner=true];
+
+  entity psychopathological_symptom extends p_symptoms
+    #[has_ner=true];
+
+  entity p_symptoms extends entity
+    #[has_ner=false];
+
+  entity cholera_outbreak extends p_cause_of
+    #[has_ner=true];
+
+  entity epidemic extends p_cause_of
+    #[has_ner=true];
+
+  entity plague_epidemic extends p_cause_of
+    #[has_ner=true];
+
+  entity disease_outbreak extends p_cause_of
+    #[has_ner=true];
+
+  entity p_cause_of extends entity
+    #[has_ner=false];
+
+  entity heterogeneous_anatomical_cluster extends p_afflicts
+    #[has_ner=true];
+
+  entity umbrella_term extends p_afflicts
+    #[has_ner=true];
+
+  entity medical_term extends p_afflicts
+    #[has_ner=true];
+
+  entity biological_system extends p_afflicts
+    #[has_ner=true];
+
+  entity cranial_nerve extends p_afflicts
+    #[has_ner=true];
+
+  entity nerve extends p_afflicts
+    #[has_ner=true];
+
+  entity differentiated_hemal_cell extends p_afflicts
+    #[has_ner=true];
+
+  entity organ_system extends p_afflicts
+    #[has_ner=true];
+
+  entity organism_substance extends p_afflicts
+    #[has_ner=true];
+
+  entity cell extends p_afflicts
+    #[has_ner=true];
+
+  entity male_human extends p_afflicts
+    #[has_ner=true];
+
+  entity artery extends p_afflicts
+    #[has_ner=true];
+
+  entity blood_vessel extends p_afflicts
+    #[has_ner=true];
+
+  entity tissue extends p_afflicts
+    #[has_ner=true];
+
+  entity cellular_component extends p_afflicts
+    #[has_ner=true];
+
+  entity p_afflicts extends entity
+    #[has_ner=false];
+
+  entity p_medical_condition_treated extends entity
+    #[has_ner=false];
+
+  entity language extends p_language
+    #[has_ner=true];
+
+  entity p_language extends entity
+    #[has_ner=false];
+
+  entity sovereign_state extends p_country_of_citizenship, p_location_of_discovery, p_country
+    #[has_ner=true];
+
+  entity p_country_of_citizenship extends entity
+    #[has_ner=false];
+
+  entity p_found_in_taxon extends entity
+    #[has_ner=false];
+
+  entity p_subject_of extends entity
+    #[has_ner=false];
+
+  entity p_location_of_discovery extends entity
+    #[has_ner=false];
+
+  entity p_country extends entity
+    #[has_ner=false];
+
+  entity p_location extends entity
+    #[has_ner=false];
+
+  entity entity
+    #[has_ner=false];
+
+  list query health_problem(out id : Entity(org.wikidata:health_problem)
+                            #_[canonical={
+                              base=["name"],
+                              property=["name"],
+                              passive_verb=["named", "called"]
+                            }],
+                            out medical_specialty : Array(Entity(org.wikidata:p_medical_specialty))
+                            #_[canonical={
+                              default=["property"],
+                              base=["medical specialties"],
+                              property=["medical specialization in", "specialization in", "a specialization in", "#"],
+                              verb=["belongs to", "belongs to the field of", "is from the field of"],
+                              passive_verb=["from #"],
+                              base_projection=["medical specialty", "academic discipline", "academic major", "field of study", "area of study", "field", "area"],
+                              property_projection=["medical specialties", "medical specialty"]
+  
+                            }]
+                            #[wikidata_id="P1995"],
+                            out drug_used_for_treatment : Array(Entity(org.wikidata:p_drug_used_for_treatment))
+                            #_[canonical={
+                              default=["property"],
+                              base=["drug used for treatments", "drug", "medicine", "antidote"],
+                              verb=["is treated by", "can be treated by", "is treated with", "can be treated with", "whose treatment involves"],
+                              property=["drug used for treatments", "drug", "drug treatments that include", "#"],
+                              passive_verb=["treated by", "that is treated by"],
+                              base_projection=["drug used for treatment", "chemical compound", "medication", "enzyme family", "drug"],
+                              property_projection=["drug used for treatments"]
+                            }]
+                            #[wikidata_id="P2176"],
+                            out has_cause : Array(Entity(org.wikidata:p_has_cause))
+                            #_[canonical={
+                              default=["property"],
+                              base=["cause", "origin", "reason"],
+                              property=["origin of", "correlation to", "#"],
+                              passive_verb=["caused by the #", "caused by an #", "causued by a", "that is caused by", "that can be caused by", "that results from", "that arrises because of", "that originates from", "that develops from", "that can be linked to", "caused by #"],
+                              verb=["is caused by", "results from", "is due to", "is because of", "is linked to"],
+                              base_projection=["cause", "chemical compound", "reasons", "explanation"],
+                              property_projection=["cause", "reason for", "reason behind", "explanation for"],
+                              passive_verb_projection=["caused by", "a result of"],
+                              verb_projection=["caused // by", "caused", "result from", "originate from", "have"]
+                            }]
+                            #[wikidata_id="P828"],
+                            out genetic_association : Array(Entity(org.wikidata:p_genetic_association))
+                            #_[canonical={
+                              default=["property"],
+                              base=["genetic association", "genetic similarity"],
+                              verb=["is associated with", "associated with"],
+                              property=["genetic associations", "a # genetic association", "a # genetic marker", "a genetic link to #"],
+                              passive_verb=["caused by the # gene", "associated with #", "related to the gene", "corresponding to the gene"],
+                              base_projection=["genetic association", "gene", "genetic link"],
+                              property_projection=["genetic associations", "a genetic link to"],
+                              passive_verb_projection=["associated // with"]
+                            }]
+                            #[wikidata_id="P2293"],
+                            out discoverer_or_inventor : Array(Entity(org.wikidata:p_discoverer_or_inventor))
+                            #_[canonical={
+                              default=["property"],
+                              base=["discoverer", "inventor", "founder"],
+                              property=["discoverer", "inventor", "founder"],
+                              verb=["was discovered by", "was invented by", "was found by", "is discovered by"],
+                              passive_verb=["discovered_by", "invented by", "found by"],
+                              base_projection=["discoverer", "inventor", "university teacher", "physician", "writer", "ophthalmologist", "professor"],
+                              property_projection=["discoverer", "inventor", "founder"]
+                            }]
+                            #[wikidata_id="P61"],
+                            out named_after : Array(Entity(org.wikidata:p_named_after))
+                            #_[canonical={
+                              default=["preposition"],
+                              preposition=["named after", "named for", "based on the name of"],
+                              property=["naming origin of", "a name from"],
+                              base=["namesake"],
+                              verb=["is named after", "was named after"],
+                              passive_verb=["named after"],
+                              base_projection=["person", "university teacher", "physician", "writer"],
+                              preposition_projection=["named after", "named for", "based on the name of"],
+                              property_projection=["namesake"]
+                            }]
+                            #[wikidata_id="P138"],
+                            out part_of : Array(Entity(org.wikidata:p_part_of))
+                            #_[canonical={
+                              default=["reverse_property"],
+                              reverse_property=["part of", "components of", "a # part", "a # component"],
+                              property=["some relation to", "something to do with #"],
+                              base=["part of"],
+                              base_projection=["part of", "academic discipline", "disease"],
+                              reverse_property_projection=["part of"],
+                              property_projection=["part of", "something to do with"]
+                            }]
+                            #[wikidata_id="P361"],
+                            out symptoms : Array(Entity(org.wikidata:p_symptoms))
+                            #_[canonical={
+                              default=["property"],
+                              base=["symptoms", "signs"],
+                              verb=["contains symptoms", "results in", "leads to", "causes"],
+                              property=["symptoms", "#", "# symptoms", "a # symptom", "signs", "# signs"],
+                              passive_verb=["manifested by the #", "that involves", "linked to", "resulting in", "causing"],
+                              base_projection=["symptoms", "symptom", "clinical sign", "sign"],
+                              property_projection=["symptoms", "signs"],
+                              passive_verb_projection=["manifested // by"]
+                            }]
+                            #[wikidata_id="P780"],
+                            out cause_of : Array(Entity(org.wikidata:p_cause_of))
+                            #_[canonical={
+                              default=["reverse_property"],
+                              reverse_property=["cause of", "# cause", "# 's cause"],
+                              property=["cause of"],
+                              base=["cause of", "origin of"],
+                              passive_verb=["causing the #", "caused by"],
+                              verb=["is triggered by #", "is caused by #"],
+                              base_projection=["cause", "taxon", "origin", "reason"],
+                              reverse_property_projection=["cause of", "causes of", "reasons behind", "triggers for"],
+                              property_projection=["cause", "reason", "origin"],
+                              passive_verb_projection=["caused by", "explained by"],
+                              verb_projection=["include", "have"]
+                            }]
+                            #[wikidata_id="P1542"],
+                            out afflicts : Array(Entity(org.wikidata:p_afflicts))
+                            #_[canonical={
+                              default=["verb"],
+                              verb=["afflicts", "affects the #", "affects a # being", "affects #", "affect the #"],
+                              property=["a target group", "affecting"],
+                              base=["# affected by", "# afflicted by"],
+                              passive_verb=["afflicting", "affecting"],
+                              base_projection=["#", "taxon", "organisms", "anatomical structure", "heterogeneous anatomical cluster"],
+                              verb_projection=["afflict", "afflicts", "affects", "affect"],
+                              property_projection=["afflicted", "affected", "afflicted group", "affected group", "target"]
+                            }]
+                            #[wikidata_id="P689"],
+                            out medical_condition_treated : Array(Entity(org.wikidata:p_medical_condition_treated))
+                            #_[canonical={
+                              default=["passive_verb"],
+                              passive_verb=["medical condition treated"],
+                              property=["medical condition treated"],
+                              base=["medical condition treated"],
+                              base_projection=["medical condition treated", "chemical compound", "medication"],
+                              passive_verb_projection=["medical condition treated"],
+                              property_projection=["medical condition treated"]
+                            }]
+                            #[wikidata_id="P2175"],
+                            out language : Array(Entity(org.wikidata:p_language))
+                            #_[canonical={
+                              default=["property"],
+                              base=["languages"],
+                              property=["languages", "#"],
+                              base_projection=["language", "language"],
+                              property_projection=["languages"]
+                            }]
+                            #[wikidata_id="P2439"],
+                            out country_of_citizenship : Array(Entity(org.wikidata:p_country_of_citizenship))
+                            #_[canonical={
+                              default=["property"],
+                              base=["country of citizenships"],
+                              property=["country of citizenships", "#"],
+                              base_projection=["country of citizenship", "sovereign state"],
+                              property_projection=["country of citizenships"]
+                            }]
+                            #[wikidata_id="P27"],
+                            out found_in_taxon : Array(Entity(org.wikidata:p_found_in_taxon))
+                            #_[canonical={
+                              default=["verb"],
+                              verb=["found in taxon", "found in the genus #", "is found in taxon", "is found in the genus #", "occurs in", "is found in"],
+                              property=["presence in taxon"],
+                              passive_verb=["found in taxon", "found in the genus"],
+                              base=["taxon", "target taxon"],
+                              base_projection=["found in taxon", "taxon"],
+                              verb_projection=["occur in", "manifest in"],
+                              property_projection=["target"]
+                            }]
+                            #[wikidata_id="P703"],
+                            out subject_of : Array(Entity(org.wikidata:p_subject_of))
+                            #_[canonical={
+                              default=["reverse_property"],
+                              reverse_property=["subject of", "# subject", "# 's subject"],
+                              property=["subject of"],
+                              base=["subject of"],
+                              base_projection=["subject"],
+                              reverse_property_projection=["subject of"],
+                              property_projection=["subject of", "a subject of"]
+                            }]
+                            #[wikidata_id="P805"],
+                            out location_of_discovery : Array(Entity(org.wikidata:p_location_of_discovery))
+                            #_[canonical={
+                              default=["property"],
+                              base=["location of discoveries"],
+                              verb=["was discovered in", "was found in", "was invented in", "is discovered in", "is found in", "is invented in"],
+                              property=["location of discoveries", "discovery location", "location of discovery"],
+                              passive_verb=["discovered in", "found in", "invented in"],
+                              base_projection=["location of discovery", "sovereign state", "location", "place"],
+                              property_projection=["location of discovery", "discovery location"]
+                            }]
+                            #[wikidata_id="P189"],
+                            out country : Array(Entity(org.wikidata:p_country))
+                            #_[canonical={
+                              default=["property"],
+                              base=["countries"],
+                              property=["countries"],
+                              preposition=["from #", "in #"],
+                              adjective=["# 's"],
+                              base_projection=["country", "sovereign state"],
+                              property_projection=["countries"],
+                              preposition_projection=["from", "in"]
+                            }]
+                            #[wikidata_id="P17"],
+                            out location : Array(Entity(org.wikidata:p_location))
+                            #_[canonical={
+                              default=["property"],
+                              base=["locations"],
+                              property=["locations"],
+                              base_projection=["location"],
+                              property_projection=["locations"]
+                            }]
+                            #[wikidata_id="P276"])
+  #_[canonical=["health problem", "disease"]]
+  #[handle_thingtalk=true]
+  #[csqa_type="Q2057971"]
+  #[wikidata_types=["Q12136"]]
+  #[wikidata_subject=["Q2057971", "Q12136"]]
+  #[minimal_projection=["id"]];
+}
