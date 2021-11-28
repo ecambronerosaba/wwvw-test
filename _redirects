@@ -1,2 +1,2 @@
-/.well-known/wwvw   /well-known/schema.tt
-/.well-known/wwvw/?meta=1 	/well-known/manifest.tt
+/.well-known/wwvw-schema   /well-known/schema.tt
+/.well-known/wwvw-manifest	/well-known/manifest.tt
