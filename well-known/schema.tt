@@ -1,0 +1,5 @@
+class @app.netlify.estebanjackmatt extends com.forismatic.quotes {
+  query get(out text : String,
+            out author : String)
+  #[minimal_projection=[]];
+}

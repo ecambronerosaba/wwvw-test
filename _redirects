@@ -1,1 +1,2 @@
-/.well-known/wwvw 	/well-known/wwvw.html
+/.well-known/wwvw   /well-known/schema.tt
+/.well-known/wwvw 	/well-known/wwvw?meta=1
