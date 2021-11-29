@@ -1,4 +1,4 @@
-class app.netlify.estebanjackmatt extends @com.forismatic.quotes {
+class @app.netlify.estebanjackmatt extends @com.forismatic.quotes {
   // tell the system the device uses generic rest
   import loader from @org.thingpedia.generic_rest.v1();
 
