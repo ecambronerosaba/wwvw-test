@@ -1,7 +1,7 @@
 class @app.netlify.estebanjackmatt extends @com.forismatic.quotes {
   // tell the system the device uses generic rest
   import loader from @org.thingpedia.generic_rest.v1();
-
+  import config from @org.thingpedia.config.none();
   // the function to return a random quote
   query get(out text: String #[json_key="quoteText"],
             out author: String #[json_key="quoteAuthor"])
